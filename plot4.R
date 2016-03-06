@@ -12,7 +12,7 @@ plot(data_withNA$Global_active_power,type = 'l',xaxt='n',xlab='',ylab='Global Ac
 axis(side=1, at=c(1,1441,2880), labels = c('Thu','Fri','Sat'))
 #(1,2) Voltage
 data_withNA$Voltage<-as.numeric(data_withNA$Voltage)
-plot(data_withNA$Voltage,type = 'l',xaxt='n',xlab='',ylab='Voltage')
+plot(data_withNA$Voltage,type = 'l',xaxt='n',xlab='datetime',ylab='Voltage')
 axis(side=1, at=c(1,1441,2880), labels = c('Thu','Fri','Sat'))
 #(2,1) Submetering
 data_withNA$Sub_metering_1<-as.numeric(data_withNA$Sub_metering_1)
@@ -28,6 +28,6 @@ axis(side=2, at=c(0,5,10,15,20,25), labels = c(0,5,10,15,20,25))
 legend("topright",c('Sub_metering_1','Sub_metering_2','Sub_metering_3'),col=c('black','red','blue'),lty=c(1,1,1),bty='n')
 #(2,2) Global Reactive Power
 data_withNA$Global_reactive_power<-as.numeric(data_withNA$Global_reactive_power)
-plot(data_withNA$Global_reactive_power,type = 'l',xaxt='n',xlab='',ylab='Global Active Power')
+plot(data_withNA$Global_reactive_power,type = 'l',xaxt='n',xlab='datetime',ylab='Global Active Power')
 axis(side=1, at=c(1,1441,2880), labels = c('Thu','Fri','Sat'))
 dev.off()
